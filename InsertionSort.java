@@ -24,14 +24,23 @@ class InsertionSort{
 		}
 	}
 
-	public void sort(){
-		for(int i = 0; i < nums.size() - 1; i++){
-			for(int j = i+1; j < nums.size(); j++){
-				if(nums.get(i) > nums.get(j)){
-					swap(i,j);		
-				}
-			}
-		}
+
+	public void sort()
+{		long count1 = 0;
+		long count2 = 0;
+
+	    for(int i = 1; i < nums.size(); i++){
+	        int j = i;
+	        while ((j > 0) && (nums.get(j) < nums.get(j-1))){				       
+	            swap(j, j-1);        
+	            j--;
+	            count2++;
+	        }
+	        count1++;
+	    } 
+		System.out.println("For loop: " + count1);
+		System.out.println("While loop: " + count2);	
+
 	}
 
 	public void swap(int x, int y){
@@ -39,6 +48,7 @@ class InsertionSort{
 		nums.set(y, nums.get(x)^nums.get(y));
 		nums.set(x, nums.get(x)^nums.get(y));
 	}
+
 
 	public void write(){
 		try{
@@ -53,14 +63,23 @@ class InsertionSort{
 		} catch (IOException e){
 				e.printStackTrace();
 		}
-		System.out.println("Done");
+		System.out.println("");
 
+	}
+
+	public void display(){
+		for(int i = 0; i < nums.size(); i++){
+			System.out.print(nums.get(i) + ",");
+		}
+		System.out.println("");		
 	}
 
 	public static void main(String[] args) {
 		InsertionSort e = new InsertionSort(args[0]);
+		long startTime = System.nanoTime();
 		e.sort();
-		e.write();
+		System.out.println("Time taken to sort: " + (System.nanoTime() - startTime));
+		e.write();	
 	}
 
 }

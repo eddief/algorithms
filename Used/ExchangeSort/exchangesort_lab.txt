@@ -1,0 +1,609 @@
+-----------------------------n = 10
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1842622
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1803721
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1815454
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1801975
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1854985
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1820693
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1803023
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1817061
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1816013
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1806934
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1835638
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1864693
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1832495
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1838851
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1829073
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1803302
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1816572
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1841366
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1797575
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1785493
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1847861
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1888299
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1834172
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1806165
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1870350
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1841086
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1815106
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1771245
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1849887
+
+OuterForLoopCount: 9.0
+InnerForLoopCount: 45.0
+Time taken to sort: 1797925
+
+-----------------------------n = 100
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11580105
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11379870
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11403895
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11608740
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11247241
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 10903553
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 10164492
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 10833083
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11617610
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11596098
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11333495
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11490080
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 10894752
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11133400
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11271826
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 13529515
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11625502
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11464518
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11390346
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 10965362
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 12197014
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 10890981
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11598194
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 10392523
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11389089
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 13749655
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11187737
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 9063724
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 10565730
+
+OuterForLoopCount: 99.0
+InnerForLoopCount: 4950.0
+Time taken to sort: 11526956
+
+-----------------------------n = 1000
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44689416
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45393347
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44681943
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45016204
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 42472235
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45259671
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44431353
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44618318
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44973741
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44841531
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44327080
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44946572
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44678941
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45004331
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45258902
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44880642
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44601765
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44678452
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45650712
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45128508
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44996997
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44559652
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45216928
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 46630725
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45425823
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 45736966
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 43718971
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44829379
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44851657
+
+OuterForLoopCount: 999.0
+InnerForLoopCount: 499500.0
+Time taken to sort: 44628655
+
+-----------------------------n = 10000
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 686904388
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 615958278
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 691453221
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 661633784
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 687090585
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 631992651
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 619835168
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 622272001
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 683403453
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 642259880
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 686301239
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 676621515
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 672366853
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 671973089
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 613103305
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 623509449
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 674016435
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 678917688
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 623244890
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 687380077
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 665595600
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 677565001
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 695682531
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 622045016
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 695384727
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 608012574
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 613647649
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 649650415
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 618665257
+
+OuterForLoopCount: 9999.0
+InnerForLoopCount: 4.9995E7
+Time taken to sort: 682981752
+
+-----------------------------n = 100000
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56062924014
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56172852529
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55996033587
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55998619950
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56211277531
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56175325819
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55999117430
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56222984328
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55998348477
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55995619918
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56016428571
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56286015255
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55995888458
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56003345831
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55996999422
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55996808896
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55998339678
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55997597613
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55995423593
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55992819002
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56330573649
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56349036194
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56320275830
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55999360547
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55998732884
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 56023484707
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55994340355
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55998568059
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55995563067
+
+OuterForLoopCount: 99999.0
+InnerForLoopCount: 4.99995E9
+Time taken to sort: 55998053886
+
