@@ -38,8 +38,8 @@ class QuickSort{
 		System.out.println("Time taken to sort: " + timetaken);
 
 		//writeSorted();
-		writeData(comps, "m_counts.txt");
-		writeData(timetaken, "m_times.txt");
+		writeData(comps, "q_counts.txt");
+		writeData(timetaken, "q_times.txt");
 	}
 
 	public void sort(int low, int high){
