@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "------------FOR N=10" >> labbook.txt
 echo "" >> labbook.txt
 

@@ -6,8 +6,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-//0.152 ms to read-in file and add to list
-
 class ExchangeSort{
 
 	private ArrayList<Integer> nums;
@@ -38,8 +36,7 @@ class ExchangeSort{
 				}
 			}
 		}
-		System.out.println("OuterForLoopCount: " + count1);
-		System.out.println("InnerForLoopCount: " + count2);
+		System.out.println("Number of Comparisons: " + count2);
 	}
 
 	public void swap(int x, int y){

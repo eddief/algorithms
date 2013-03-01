@@ -25,22 +25,18 @@ class InsertionSort{
 	}
 
 
-	public void sort()
-{		long count1 = 0;
-		long count2 = 0;
+	public long sort(){
+		long count = 0;
 
 	    for(int i = 1; i < nums.size(); i++){
 	        int j = i;
 	        while ((j > 0) && (nums.get(j) < nums.get(j-1))){				       
 	            swap(j, j-1);        
 	            j--;
-	            count2++;
+	            count++;
 	        }
-	        count1++;
 	    } 
-		System.out.println("For loop: " + count1);
-		System.out.println("While loop: " + count2);	
-
+	    return count;
 	}
 
 	public void swap(int x, int y){
@@ -50,9 +46,9 @@ class InsertionSort{
 	}
 
 
-	public void write(){
+	public void writeSorted(){
 		try{
-			File file = new File("sorted.txt");
+			File file = new File("insertion_sorted.txt");
 			FileWriter fw = new FileWriter(file.getAbsoluteFile());
 			BufferedWriter bw = new BufferedWriter(fw);
 			for(int k = 0; k < nums.size(); k++){
@@ -64,8 +60,29 @@ class InsertionSort{
 				e.printStackTrace();
 		}
 		System.out.println("");
-
 	}
+
+    public void writeData(long datum, String filename){
+
+        try{
+            File file = new File(filename);
+
+            if(!file.exists()){
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getName(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            String content = "" + datum + "\n";
+            bw.write(content);
+            bw.close();
+            
+        } catch (IOException e){
+                e.printStackTrace();
+        }
+
+    }
+
 
 	public void display(){
 		for(int i = 0; i < nums.size(); i++){
@@ -76,10 +93,18 @@ class InsertionSort{
 
 	public static void main(String[] args) {
 		InsertionSort e = new InsertionSort(args[0]);
+
 		long startTime = System.nanoTime();
-		e.sort();
-		System.out.println("Time taken to sort: " + (System.nanoTime() - startTime));
-		e.write();	
+		long comparisons = e.sort();
+		long timetaken = System.nanoTime() - startTime;
+
+		System.out.println("Number of Comparisons:" + comparisons);
+		System.out.println("Time taken to sort: " + timetaken);
+
+		//e.writeSorted();
+		e.writeData(comparisons, "counts.txt");
+		e.writeData(timetaken, "times.txt");
+
 	}
 
 }
