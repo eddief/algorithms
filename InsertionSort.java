@@ -102,9 +102,8 @@ class InsertionSort{
 		System.out.println("Time taken to sort: " + timetaken);
 
 		//e.writeSorted();
-		e.writeData(comparisons, "counts.txt");
-		e.writeData(timetaken, "times.txt");
-
+		e.writeData(comparisons, "i_counts.txt");
+		e.writeData(timetaken, "i_times.txt");
 	}
 
 }
