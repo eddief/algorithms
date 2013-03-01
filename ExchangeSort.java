@@ -24,7 +24,7 @@ class ExchangeSort{
 		}
 	}
 
-	public void sort(){
+	public long sort(){
 		long count = 0;
 		for(int i = 0; i < nums.size() - 1; i++){
 			for(int j = i+1; j < nums.size(); j++){
@@ -34,6 +34,7 @@ class ExchangeSort{
 				}
 			}
 		}
+		return count;
 	}
 
 	public void swap(int x, int y){
@@ -72,6 +73,7 @@ class ExchangeSort{
             String content = "" + datum + "\n";
             bw.write(content);
             bw.close();
+            
             
         } catch (IOException e){
                 e.printStackTrace();
