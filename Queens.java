@@ -2,30 +2,31 @@ public class Queens {
 
     private int[] q;
     private int N;
+    private int count;
 
     public Queens(int _n){
         N = _n;
         q = new int[N];
         nqueens(0);
+        System.out.println(count);
     }
 
     public boolean promising(int n) {
+        count++;
         for (int i = 0; i < n; i++) {
 
             if (q[i] == q[n]){
                 return false;
             }
-
             if ((q[i]-q[n]) == (n-i)){
                 return false;
             }
-
             if ((q[n]-q[i]) == (n-i)){
                 return false;
             }
         }
-        return true;
 
+        return true;
     }
 
 
