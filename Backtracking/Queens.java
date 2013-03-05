@@ -24,7 +24,6 @@ public class Queens {
         for(int i = 0; i < 100; i++){
             sum = sum + montecarlo();
         }
-        sum = sum / 100;
 
         //reset after monte carlo
         count = 1;
@@ -34,12 +33,13 @@ public class Queens {
         nqueens(0);
         long timetaken = System.nanoTime() - startTime;
 
-        //System.out.println("MonteCarlo Estimation: " + (sum / 100));
-        //System.out.println("Nodes visited: " + count);
-        //System.out.println("Total nodes: " + Math.pow(N,N) + "\n");
+        System.out.println("MonteCarlo Estimation: " + (sum / 100));
+        System.out.println("Nodes visited: " + count);
+        System.out.println("Total nodes: " + Math.pow(N,N) + "\n");
 
-        writeData(timetaken, "queens_time.txt");
-        writeData(sum, "queens_estimate.txt");
+        //writeData(timetaken, "queens_time.txt");
+        //writeData(sum, "queens_estimate.txt");
+        //writeData(count, "queens_visited.txt");
         
     }
 

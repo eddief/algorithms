@@ -6,43 +6,41 @@ do
 done
 python2 ../Sorting/mean.py queens_time.txt >> queens_avgtime.txt
 python2 ../Sorting/mean.py queens_estimate.txt >> queens_eavg.txt
+python2 ../Sorting/mean.py queens_visited.txt >> queens_visavg.txt
+rm queens_visited.txt
 rm queens_time.txt
 rm queens_estimate.txt
 
 for i in `seq 1 10`;
 do
-	java Queens 20
+	java Queens 6
 done
 python2 ../Sorting/mean.py queens_time.txt >> queens_avgtime.txt
 python2 ../Sorting/mean.py queens_estimate.txt >> queens_eavg.txt
+python2 ../Sorting/mean.py queens_visited.txt >> queens_visavg.txt
+rm queens_visited.txt
 rm queens_time.txt
 rm queens_estimate.txt
 
 for i in `seq 1 10`;
 do
-	java Queens 35
+	java Queens 8
 done
 python2 ../Sorting/mean.py queens_time.txt >> queens_avgtime.txt
 python2 ../Sorting/mean.py queens_estimate.txt >> queens_eavg.txt
-rm queens_time.txt
-rm queens_estimate.txt
-
-
-for i in `seq 1 10`;
-do
-	java Queens 55
-done
-python2 ../Sorting/mean.py queens_time.txt >> queens_avgtime.txt
-python2 ../Sorting/mean.py queens_estimate.txt >> queens_eavg.txt
+python2 ../Sorting/mean.py queens_visited.txt >> queens_visavg.txt
+rm queens_visited.txt
 rm queens_time.txt
 rm queens_estimate.txt
 
 
 for i in `seq 1 10`;
 do
-	java Queens 100
+	java Queens 12
 done
 python2 ../Sorting/mean.py queens_time.txt >> queens_avgtime.txt
 python2 ../Sorting/mean.py queens_estimate.txt >> queens_eavg.txt
-rm queens_time.tx
+python2 ../Sorting/mean.py queens_visited.txt >> queens_visavg.txt
+rm queens_visited.txt
+rm queens_time.txt
 rm queens_estimate.txt
