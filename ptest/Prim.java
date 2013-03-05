@@ -1,6 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;  
 import java.util.List;
-import java.util.Queue;
 import java.util.LinkedList;
 import java.io.File;
 import java.io.BufferedReader;
@@ -9,19 +9,26 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Kruskal{
+public class Prim{
 
 	private List<Edge> s, min;
-	private Queue<Edge> u;
+	private List<Integer> count;
 
+	//number of edges
 	private int n;
 
+	//number of vertices
+	private int m;
 
-	public Kruskal(String filename){
 
-		s = new ArrayList<Edge>();
+	public Prim(String filename){
+
+		s = new LinkedList<Edge>();
 		min = new ArrayList<Edge>();
-		u = new LinkedList<Edge>();
+
+		//count number of vertices
+		count = new ArrayList<Integer>();
+
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
 			String curr;
@@ -34,7 +41,16 @@ public class Kruskal{
 				int b = Integer.parseInt(line[1]);
 				int c = Integer.parseInt(line[2]);			
 
-				s.add(new Edge(a, b, c));		
+				s.add(new Edge(a, b, c));
+
+				//count vertices
+				if(!count.contains(a)){
+					count.add(a);
+				}
+				if(!count.contains(b)){
+					count.add(b);
+				}
+
 			}
 
 
@@ -43,49 +59,41 @@ public class Kruskal{
 		}
 
 		n = s.size();
+		m = count.size();
 
 		Edge[] temp = s.toArray(new Edge[s.size()]);
 
 		QuickSort q = new QuickSort(temp);
-		Edge[] sorted = q.sort(0, temp.length - 1);
-
-		for(Edge e: sorted){
-			u.add(e);
-		}
+		s =  Arrays.asList(q.sort(0, temp.length - 1));
 
      	minspan();
 
 		System.out.println(min);
-
 	}
+
 
 	public void minspan(){
 
-		DisjointSet d = new DisjointSet(n);
+		List<Edge> t = new LinkedList<Edge>();
 
-		d.initial();
-
-		while(!u.isEmpty()){
-			Edge e = u.poll();
-
-			int i = e.getleft();
-			int j = e.getright();
-
-			int p = d.find(i);
-			int q = d.find(j);
-
-			if(! d.equal(p, q)){
-				d.merge(p, q);
-				min.add(e);
+		for(int i = 1; i < m; i++){
+			for(int k = 0; k < n; k++){
+				if(s.get(k).getleft() == i || s.get(k).getright() == i){
+					if(!min.contains(s.get(k))){
+						t.add(s.get(k));
+					}
+				}
 			}
 
-			u.remove(e);
+			min.add(t.get(0));
+			t.clear();
 		}
+
 	}
 
 	
 	public static void main(String[] args) {
-		new Kruskal(args[0]);
+		new Prim(args[0]);
 	}
 
 }
