@@ -57,10 +57,10 @@ public class Kruskal{
 		minspan();
 		long timetaken = System.nanoTime() - startTime;
 
-		e.writeData(timetaken, "kruskal_time.txt");
+		writeData(timetaken, "kruskal_time.txt");
 
 
-		System.out.println(min);
+		//System.out.println(min);
 
 	}
 

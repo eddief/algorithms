@@ -71,9 +71,9 @@ public class Prim{
 		minspan();
 		long timetaken = System.nanoTime() - startTime;
 
-		e.writeData(timetaken, "prim_time.txt");
+		writeData(timetaken, "prim_time.txt");
 
-		System.out.println(min);
+		//System.out.println(min);
 	}
 
 
