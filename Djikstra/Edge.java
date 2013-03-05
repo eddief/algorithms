@@ -1,10 +1,10 @@
 class Edge{
 
-	private int weight, vertleft, vertright;
+	private int weight, fromvert, tovert;
 
-	public Edge(int vertleft, int vertright, int weight){
-		this.vertleft = vertleft;
-		this.vertright = vertright;
+	public Edge(int fromvert, int tovert, int weight){
+		this.fromvert = fromvert;
+		this.tovert = tovert;
 		this.weight = weight;
 	}	
 
@@ -12,16 +12,16 @@ class Edge{
 		return weight;
 	}
 
-	public int getleft(){
-		return vertleft;
+	public int getfrom(){
+		return fromvert;
 	}
 
-	public int getright(){
-		return vertright;
+	public int getto(){
+		return tovert;
 	}
 
 	public String toString(){
-		return "(" + vertleft + ", " + vertright + ") = " + weight;
+		return "(" + fromvert + ", " + tovert + ") = " + weight;
 	}
 
 }

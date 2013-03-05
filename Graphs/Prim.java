@@ -66,7 +66,12 @@ public class Prim{
 		QuickSort q = new QuickSort(temp);
 		s =  Arrays.asList(q.sort(0, temp.length - 1));
 
-     	minspan();
+
+		long startTime = System.nanoTime();
+		minspan();
+		long timetaken = System.nanoTime() - startTime;
+
+		e.writeData(timetaken, "prim_time.txt");
 
 		System.out.println(min);
 	}
@@ -90,6 +95,27 @@ public class Prim{
 		}
 
 	}
+
+    public void writeData(long datum, String filename){
+
+        try{
+            File file = new File(filename);
+
+            if(!file.exists()){
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getName(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            String content = "" + datum + "\n";
+            bw.write(content);
+            bw.close();
+            
+        } catch (IOException e){
+                e.printStackTrace();
+        }
+
+    }
 
 	
 	public static void main(String[] args) {
