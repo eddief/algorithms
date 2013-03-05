@@ -6,6 +6,7 @@ do
 	java $1 out.txt
 done
 python2 ../Sorting/mean.py $2 >> $3
+rm $2
 
 for i in `seq 1 30`;
 do
@@ -13,6 +14,7 @@ do
 	java $1 out.txt
 done
 python2 ../Sorting/mean.py $2 >> $3
+rm $2
 
 for i in `seq 1 30`;
 do
@@ -20,6 +22,7 @@ do
 	java $1 out.txt
 done
 python2 ../Sorting/mean.py $2 >> $3
+rm $2
 
 for i in `seq 1 30`;
 do
@@ -27,6 +30,7 @@ do
 	java $1 out.txt
 done
 python2 ../Sorting/mean.py $2 >> $3
+rm $2
 
 for i in `seq 1 30`;
 do
@@ -34,3 +38,4 @@ do
 	java $1 out.txt
 done
 python2 ../Sorting/mean.py $2 >> $3
+rm $2

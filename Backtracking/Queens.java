@@ -2,6 +2,12 @@ import java.lang.Math;
 import java.util.Random;
 import java.util.List;
 import java.util.ArrayList;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Queens {
 
@@ -23,11 +29,15 @@ public class Queens {
         count = 1;
         q = new int[N+1];
 
+        long startTime = System.nanoTime();
         nqueens(0);
+        long timetaken = System.nanoTime() - startTime;
 
         System.out.println("MonteCarlo Estimation: " + (sum / 100));
         System.out.println("Nodes visited: " + count);
         System.out.println("Total nodes: " + Math.pow(N,N) + "\n");
+
+        writeData(timetaken, "queens_time.txt");
         
     }
 
@@ -115,6 +125,27 @@ public class Queens {
             System.out.println("");
         }  
         System.out.println("");
+
+    }
+
+    public void writeData(long datum, String filename){
+
+        try{
+            File file = new File(filename);
+
+            if(!file.exists()){
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getName(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            String content = "" + datum + "\n";
+            bw.write(content);
+            bw.close();
+            
+        } catch (IOException e){
+                e.printStackTrace();
+        }
 
     }
 
