@@ -1,10 +1,10 @@
 class Edge{
 
-	private int weight, fromvert, tovert;
+	private int weight, from, too;
 
-	public Edge(int fromvert, int tovert, int weight){
-		this.fromvert = fromvert;
-		this.tovert = tovert;
+	public Edge(int from, int too, int weight){
+		this.from = from + 1;
+		this.too = too + 1;
 		this.weight = weight;
 	}	
 
@@ -13,15 +13,15 @@ class Edge{
 	}
 
 	public int getfrom(){
-		return fromvert;
+		return from;
 	}
 
-	public int getto(){
-		return tovert;
+	public int gettoo(){
+		return too;
 	}
 
 	public String toString(){
-		return "(" + fromvert + ", " + tovert + ") = " + weight;
+		return "(" + from + ", " + too + ") = " + weight;
 	}
 
 }
