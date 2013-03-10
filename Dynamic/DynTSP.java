@@ -93,7 +93,7 @@ public class DynTSP{
 						CollectedEdge temp = new CollectedEdge(f);
 						temp.addEdge(e);
 						coll.offer(temp);
-
+						graph.remove(e);
 					}
 
 				}
