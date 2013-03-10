@@ -1,4 +1,4 @@
 #!/bin/bash
 
 javac *.java
-java Djikstra
+java Djikstra graph.txt 5

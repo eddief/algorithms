@@ -1,6 +1,12 @@
 import java.util.Arrays;
 import java.util.List;
 import java.util.LinkedList;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Djikstra{
 
@@ -15,6 +21,7 @@ public class Djikstra{
 		this.graph = _graph;
 		n = graph.length;
 		findpath();
+		System.out.println(lin);
 	}
 
 	public void findpath(){
@@ -54,8 +61,6 @@ public class Djikstra{
 			}
 
 		}
-
-		System.out.println(lin);
 	}
 
 	public void doadd(int from, int too){
@@ -70,53 +75,40 @@ public class Djikstra{
 	}
 
 	public static void main(String[] args) {
-		int[][] g = 
 
+		String[] line;
+		String curr;
 
-		s = new ArrayList<Edge>();
-		min = new ArrayList<Edge>();
+		String filename = args[0];
+		int size = Integer.parseInt(args[1]);
+
+		int[][] g = new int[size][size];
+		int j = 0;
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
-			String curr;
-			int j;
-			int[][] graph;
 
 			while ((curr = br.readLine()) != null) {
 
-				line = curr.trim().split(", "));
+				line = curr.trim().split(", ");
 
 				for(int i = 0; i < line.length; i++){
 
+					int num = Integer.parseInt(line[i]);
 
-					
+					if(num == -1){
+						g[j][i] = Integer.MAX_VALUE;
+					}else{
+						g[j][i] = num;
+					}
+
 				}
 
-				int a = Integer.parseInt(line[0]);
-				int b = Integer.parseInt(line[1]);
-				int c = Integer.parseInt(line[2]);			
-
-				s.add(new Edge(a, b, c));	
-
-				//count vertices
-				if(!count.contains(a)){
-					count.add(a);
-				}
-				if(!count.contains(b)){
-					count.add(b);
-				}	
+				j++;
 			}
-
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
-
-
-
-
-		
-
 
 		Djikstra d = new Djikstra(g);
 	}

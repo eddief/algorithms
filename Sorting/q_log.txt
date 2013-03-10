@@ -1,0 +1,224 @@
+------------FOR N=10
+
+Number of Comparisons:13
+Time taken to sort: 21790
+Number of Comparisons:21
+Time taken to sort: 24724
+Number of Comparisons:19
+Time taken to sort: 24304
+Number of Comparisons:18
+Time taken to sort: 22978
+Number of Comparisons:17
+Time taken to sort: 24375
+Number of Comparisons:21
+Time taken to sort: 24096
+Number of Comparisons:18
+Time taken to sort: 24863
+Number of Comparisons:18
+Time taken to sort: 24933
+Number of Comparisons:20
+Time taken to sort: 23397
+Number of Comparisons:21
+Time taken to sort: 24374
+Number of Comparisons:21
+Time taken to sort: 25352
+Number of Comparisons:22
+Time taken to sort: 24096
+Number of Comparisons:15
+Time taken to sort: 24584
+Number of Comparisons:16
+Time taken to sort: 22559
+Number of Comparisons:16
+Time taken to sort: 28914
+------------FOR N=100
+
+Number of Comparisons:333
+Time taken to sort: 178165
+Number of Comparisons:475
+Time taken to sort: 164477
+Number of Comparisons:387
+Time taken to sort: 160565
+Number of Comparisons:454
+Time taken to sort: 169295
+Number of Comparisons:356
+Time taken to sort: 171809
+Number of Comparisons:405
+Time taken to sort: 162241
+Number of Comparisons:476
+Time taken to sort: 164407
+Number of Comparisons:362
+Time taken to sort: 153861
+Number of Comparisons:476
+Time taken to sort: 163010
+Number of Comparisons:504
+Time taken to sort: 172159
+Number of Comparisons:350
+Time taken to sort: 3563023
+Number of Comparisons:509
+Time taken to sort: 165873
+Number of Comparisons:468
+Time taken to sort: 170343
+Number of Comparisons:553
+Time taken to sort: 176559
+Number of Comparisons:418
+Time taken to sort: 201283
+------------FOR N=1000
+
+Number of Comparisons:7475
+Time taken to sort: 2412248
+Number of Comparisons:6501
+Time taken to sort: 19985086
+Number of Comparisons:6063
+Time taken to sort: 16461523
+Number of Comparisons:5711
+Time taken to sort: 2260693
+Number of Comparisons:5371
+Time taken to sort: 2293868
+Number of Comparisons:5324
+Time taken to sort: 10801305
+Number of Comparisons:6800
+Time taken to sort: 2349391
+Number of Comparisons:5435
+Time taken to sort: 2177721
+Number of Comparisons:5886
+Time taken to sort: 2327671
+Number of Comparisons:5683
+Time taken to sort: 10385959
+Number of Comparisons:6959
+Time taken to sort: 2458833
+Number of Comparisons:5413
+Time taken to sort: 2291912
+Number of Comparisons:7293
+Time taken to sort: 2478318
+Number of Comparisons:5492
+Time taken to sort: 12332924
+Number of Comparisons:5684
+Time taken to sort: 2271029
+------------FOR N=5000
+
+Number of Comparisons:30094
+Time taken to sort: 50500561
+Number of Comparisons:37171
+Time taken to sort: 53439133
+Number of Comparisons:40016
+Time taken to sort: 60774215
+Number of Comparisons:28780
+Time taken to sort: 49670846
+Number of Comparisons:34400
+Time taken to sort: 77576703
+Number of Comparisons:36693
+Time taken to sort: 49384846
+Number of Comparisons:34839
+Time taken to sort: 62909612
+Number of Comparisons:32572
+Time taken to sort: 40973161
+Number of Comparisons:28771
+Time taken to sort: 14859922
+Number of Comparisons:33788
+Time taken to sort: 50035488
+Number of Comparisons:32287
+Time taken to sort: 56486100
+Number of Comparisons:34544
+Time taken to sort: 57583026
+Number of Comparisons:31221
+Time taken to sort: 55394131
+Number of Comparisons:38581
+Time taken to sort: 69414001
+Number of Comparisons:28894
+Time taken to sort: 58792887
+------------FOR N=10000
+
+Number of Comparisons:74030
+Time taken to sort: 111743900
+Number of Comparisons:63726
+Time taken to sort: 104398830
+Number of Comparisons:73001
+Time taken to sort: 118187248
+Number of Comparisons:60011
+Time taken to sort: 164468487
+Number of Comparisons:62405
+Time taken to sort: 203636880
+Number of Comparisons:69900
+Time taken to sort: 103404151
+Number of Comparisons:71167
+Time taken to sort: 101878049
+Number of Comparisons:65120
+Time taken to sort: 92372789
+Number of Comparisons:60607
+Time taken to sort: 104663110
+Number of Comparisons:61805
+Time taken to sort: 131935646
+Number of Comparisons:62827
+Time taken to sort: 108357645
+Number of Comparisons:57183
+Time taken to sort: 113898224
+Number of Comparisons:62433
+Time taken to sort: 152365131
+Number of Comparisons:67607
+Time taken to sort: 163147858
+Number of Comparisons:79129
+Time taken to sort: 159648111
+------------FOR N=50000
+
+Number of Comparisons:331307
+Time taken to sort: 269641718
+Number of Comparisons:328920
+Time taken to sort: 361676406
+Number of Comparisons:304495
+Time taken to sort: 204270829
+Number of Comparisons:336681
+Time taken to sort: 212358800
+Number of Comparisons:318679
+Time taken to sort: 291457413
+Number of Comparisons:329094
+Time taken to sort: 242731938
+Number of Comparisons:291361
+Time taken to sort: 213858501
+Number of Comparisons:299754
+Time taken to sort: 322620458
+Number of Comparisons:344261
+Time taken to sort: 307003316
+Number of Comparisons:364456
+Time taken to sort: 575295840
+Number of Comparisons:375254
+Time taken to sort: 284739728
+Number of Comparisons:352106
+Time taken to sort: 394568161
+Number of Comparisons:329853
+Time taken to sort: 394091076
+Number of Comparisons:298575
+Time taken to sort: 439270848
+Number of Comparisons:296817
+Time taken to sort: 459735254
+------------FOR N=100000
+
+Number of Comparisons:694166
+Time taken to sort: 252497917
+Number of Comparisons:740190
+Time taken to sort: 107933359
+Number of Comparisons:709900
+Time taken to sort: 281717137
+Number of Comparisons:628187
+Time taken to sort: 210612348
+Number of Comparisons:605893
+Time taken to sort: 118315267
+Number of Comparisons:648074
+Time taken to sort: 101604621
+Number of Comparisons:582499
+Time taken to sort: 336380659
+Number of Comparisons:706283
+Time taken to sort: 387032356
+Number of Comparisons:587215
+Time taken to sort: 455351246
+Number of Comparisons:630699
+Time taken to sort: 401355757
+Number of Comparisons:669023
+Time taken to sort: 447549695
+Number of Comparisons:612651
+Time taken to sort: 400752050
+Number of Comparisons:616283
+Time taken to sort: 310253940
+Number of Comparisons:596720
+Time taken to sort: 285095221
+Number of Comparisons:619607
+Time taken to sort: 215004597
