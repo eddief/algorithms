@@ -63,17 +63,6 @@ public class Djikstra{
 		}
 	}
 
-	public void doadd(int from, int too){
-		return;
-	}
-
-	public void display(int[] l){
-		//System.out.println(Arrays.ToString(l));
-		for(int k = 0; k < l.length; k++){
-			System.out.println(l[k]);
-		}
-	}
-
 	public static void main(String[] args) {
 
 		String[] line;
