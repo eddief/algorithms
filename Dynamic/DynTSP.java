@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,10 +14,15 @@ import java.io.IOException;
 public class DynTSP{
 
 	private List<Edge> graph;
-	private int n;
+
+	//number of vertices
+	private int m;
 
 	public DynTSP(String filename){
 		graph = new LinkedList<Edge>();
+
+		//count number of vertices
+		List<Integer> count = new ArrayList<Integer>();
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
 			String curr;
@@ -28,7 +35,15 @@ public class DynTSP{
 				int b = Integer.parseInt(line[1]);
 				int c = Integer.parseInt(line[2]);			
 
-				graph.add(new Edge(a, b, c));		
+				graph.add(new Edge(a, b, c));	
+
+				//count vertices
+				if(!count.contains(a)){
+					count.add(a);
+				}
+				if(!count.contains(b)){
+					count.add(b);
+				}	
 			}
 
 
@@ -36,38 +51,65 @@ public class DynTSP{
 			e.printStackTrace();
 		}
 
+		m = count.size();
+
 		travel();
 	}
 
 	public void travel(){
 		Queue<CollectedEdge> coll = new LinkedList<CollectedEdge>();		
-		Queue<CollectedEdge> en = new LinkedList<CollectedEdge>();
 
-		for(Edge e: graph){
-			if(e.getright() == 1){
-				coll.offer(new CollectedEdge(e));
+		Iterator<Edge> iter = graph.iterator();
+		while (iter.hasNext()) {
+			Edge u = iter.next();
+			if(u.getright() == 1){
+				coll.offer(new CollectedEdge(u));
+				iter.remove();
 			}
 		}
 
-		int size = coll.size();
+		int count = 2;
 
-		for(int i = 0; i < size; i++){
-			CollectedEdge f = coll.poll();
-			int vertex = f.getleft();
+		while(count <= m){
 
-			for(int k = 0; k < graph.size(); k++){
-				Edge e = graph.get(k);
-				if(e.getright() == vertex && e.getleft() != f.getright()){
-					CollectedEdge temp = new CollectedEdge(f);
-					temp.addEdge(e);
-					en.offer(temp);
+			int size = coll.size();
+
+			for(int i = 0; i < size; i++){
+				CollectedEdge f = coll.poll();
+				int vertex = f.getleft();
+
+				for(int k = 0; k < graph.size(); k++){
+					Edge e = graph.get(k);
+
+					if(m == count){
+						if(e.getleft() == 1 && vertex == e.getright()){
+							CollectedEdge temp = new CollectedEdge(f);
+							temp.addEdge(e);
+							coll.offer(temp);					
+						}
+					}
+
+					else if(e.getright() == vertex && !f.contains(e.getleft())){
+						CollectedEdge temp = new CollectedEdge(f);
+						temp.addEdge(e);
+						coll.offer(temp);
+
+					}
+
 				}
-
 			}
 
+			count++;
 		}
 
-		System.out.println(en);
+		CollectedEdge min = coll.peek();
+		for(CollectedEdge p: coll){
+			if(p.getWeight() < min.getWeight()){
+				min = p;
+			}
+		}
+
+		System.out.println(min);
 
 	}
 
