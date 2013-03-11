@@ -67,13 +67,13 @@ public class Prim{
 		s =  Arrays.asList(q.sort(0, temp.length - 1));
 
 
-		long startTime = System.nanoTime();
+		//long startTime = System.nanoTime();
 		minspan();
-		long timetaken = System.nanoTime() - startTime;
+		//long timetaken = System.nanoTime() - startTime;
 
-		writeData(timetaken, "prim_time.txt");
+		//writeData(timetaken, "prim_time.txt");
 
-		//System.out.println(min);
+		System.out.println(min);
 	}
 
 

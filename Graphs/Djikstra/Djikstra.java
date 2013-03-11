@@ -20,8 +20,13 @@ public class Djikstra{
 	public Djikstra(int[][] _graph){
 		this.graph = _graph;
 		n = graph.length;
+
+		long startTime = System.nanoTime();		
 		findpath();
-		System.out.println(lin);
+		long timetaken = System.nanoTime() - startTime;
+
+		writeData(timetaken, "djikstra_time.txt");
+
 	}
 
 	public void findpath(){
@@ -62,6 +67,28 @@ public class Djikstra{
 
 		}
 	}
+
+    public void writeData(long datum, String filename){
+
+        try{
+            File file = new File(filename);
+
+            if(!file.exists()){
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getName(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            String content = "" + datum + "\n";
+            bw.write(content);
+            bw.close();
+            
+        } catch (IOException e){
+                e.printStackTrace();
+        }
+
+    }
+
 
 	public static void main(String[] args) {
 
