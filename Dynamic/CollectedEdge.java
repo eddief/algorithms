@@ -1,11 +1,11 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
 
 class CollectedEdge{
 
 	private int weight, vertleft, vertright;
 	private String print;
-	private ArrayList<Integer> collection;
+	private Set<Integer> collection;
 
 	public CollectedEdge(Edge e){
 		this.vertleft = e.getleft();
@@ -13,7 +13,7 @@ class CollectedEdge{
 		this.weight = e.getWeight();
 		this.print = e.getprint();
 
-		collection = new ArrayList<Integer>();
+		collection = new HashSet<Integer>();
 		collection.add(vertleft);
 		collection.add(vertright);
 	}
@@ -24,7 +24,7 @@ class CollectedEdge{
 		this.weight = weight + e.getWeight();
 		this.print = e.getprint();
 
-		collection = new ArrayList<Integer>();
+		collection = new HashSet<Integer>();
 		collection.addAll(e.getList());
 
 	}
@@ -33,7 +33,7 @@ class CollectedEdge{
 		return collection.contains(o);
 	}
 
-	public ArrayList<Integer> getList(){
+	public Set<Integer> getList(){
 		return collection;
 	}
 

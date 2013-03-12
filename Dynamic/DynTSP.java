@@ -1,5 +1,3 @@
-import java.util.Arrays;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -112,7 +110,7 @@ public class DynTSP{
 		List<Edge> graph = new LinkedList<Edge>();
 
 		//count number of vertices
-		List<Integer> count = new ArrayList<Integer>();
+		List<Integer> count = new LinkedList<Integer>();
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
 			String curr;
