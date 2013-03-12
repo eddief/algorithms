@@ -59,12 +59,11 @@ public class DynTSP{
 	public void travel(){
 		Queue<CollectedEdge> coll = new LinkedList<CollectedEdge>();		
 
-		Iterator<Edge> iter = graph.iterator();
-		while (iter.hasNext()) {
-			Edge u = iter.next();
-			if(u.getright() == 1){
-				coll.offer(new CollectedEdge(u));
-				iter.remove();
+		for(int i = 0; i < graph.size(); i++){
+			Edge e = graph.get(i);
+			if(e.getright() == 1){
+				coll.offer(new CollectedEdge(e));
+				graph.remove(e);
 			}
 		}
 
@@ -75,17 +74,18 @@ public class DynTSP{
 			int size = coll.size();
 
 			for(int i = 0; i < size; i++){
+
 				CollectedEdge f = coll.poll();
 				int vertex = f.getleft();
 
 				for(int k = 0; k < graph.size(); k++){
 					Edge e = graph.get(k);
 
-					if(m == count){
+					if(count == m){
 						if(e.getleft() == 1 && vertex == e.getright()){
 							CollectedEdge temp = new CollectedEdge(f);
 							temp.addEdge(e);
-							coll.offer(temp);					
+							coll.offer(temp);
 						}
 					}
 
@@ -93,7 +93,6 @@ public class DynTSP{
 						CollectedEdge temp = new CollectedEdge(f);
 						temp.addEdge(e);
 						coll.offer(temp);
-						graph.remove(e);
 					}
 
 				}
@@ -110,7 +109,6 @@ public class DynTSP{
 		}
 
 		System.out.println(min);
-
 	}
 
 
