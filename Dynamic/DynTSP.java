@@ -1,6 +1,5 @@
 import java.util.Arrays;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -18,42 +17,15 @@ public class DynTSP{
 	//number of vertices
 	private int m;
 
-	public DynTSP(String filename){
-		graph = new LinkedList<Edge>();
+	public DynTSP(List<Edge> graph, int count){
+		this.graph = graph;
+		this.m = count;
 
-		//count number of vertices
-		List<Integer> count = new ArrayList<Integer>();
-
-		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
-			String curr;
-			String[] line = new String[3];
-
-			while ((curr = br.readLine()) != null) {
-				line = curr.trim().split(", ");
-
-				int a = Integer.parseInt(line[0]);
-				int b = Integer.parseInt(line[1]);
-				int c = Integer.parseInt(line[2]);			
-
-				graph.add(new Edge(a, b, c));	
-
-				//count vertices
-				if(!count.contains(a)){
-					count.add(a);
-				}
-				if(!count.contains(b)){
-					count.add(b);
-				}	
-			}
-
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		m = count.size();
-
+		long startTime = System.nanoTime();		
 		travel();
+		long timetaken = System.nanoTime() - startTime;
+
+		writeData(timetaken, "dyntsp_time.txt");
 	}
 
 	public void travel(){
@@ -108,13 +80,69 @@ public class DynTSP{
 			}
 		}
 
-		System.out.println(min);
+		//System.out.println(min);
 	}
 
 
+    public void writeData(long datum, String filename){
+
+        try{
+            File file = new File(filename);
+
+            if(!file.exists()){
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getName(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            String content = "" + datum + "\n";
+            bw.write(content);
+            bw.close();
+            
+        } catch (IOException e){
+                e.printStackTrace();
+        }
+
+    }
 
 	public static void main(String[] args) {
-		DynTSP d = new DynTSP(args[0]);
+
+		String filename = args[0];
+
+		List<Edge> graph = new LinkedList<Edge>();
+
+		//count number of vertices
+		List<Integer> count = new ArrayList<Integer>();
+
+		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
+			String curr;
+			String[] line = new String[3];
+
+			while ((curr = br.readLine()) != null) {
+				line = curr.trim().split(", ");
+
+				int a = Integer.parseInt(line[0]);
+				int b = Integer.parseInt(line[1]);
+				int c = Integer.parseInt(line[2]);			
+
+				graph.add(new Edge(a, b, c));	
+
+				//count vertices
+				if(!count.contains(a)){
+					count.add(a);
+				}
+				if(!count.contains(b)){
+					count.add(b);
+				}	
+			}
+
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		DynTSP d = new DynTSP(graph, count.size());
+
 	}
 
 }

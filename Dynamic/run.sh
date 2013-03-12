@@ -4,32 +4,32 @@ javac *.java
 
 for i in `seq 1 15`;
 do
-	python2 graphgen.py graph.txt 5
-	java Djikstra graph.txt 5
+	python2 graphgen.py g.txt 5
+	java DynTSP g.txt 5
 done
-python2 mean.py djikstra_time.txt >> dj_avg.txt
-rm djikstra_time.txt
+python2 mean.py dyntsp_time.txt >> dyn_avg.txt
+rm dyntsp_time.txt
 
 for i in `seq 1 15`;
 do
-	python2 graphgen.py graph.txt 15
-	java Djikstra graph.txt 15
+	python2 graphgen.py g.txt 15
+	java DynTSP g.txt 15
 done
-python2 mean.py djikstra_time.txt >> dj_avg.txt
-rm djikstra_time.txt
+python2 mean.py dyntsp_time.txt >> dyn_avg.txt
+rm dyntsp_time.txt
 
 for i in `seq 1 15`;
 do
-	python2 graphgen.py graph.txt 30
-	java Djikstra graph.txt 30
+	python2 graphgen.py g.txt 30
+	java DynTSP g.txt 30
 done
-python2 mean.py djikstra_time.txt >> dj_avg.txt
-rm djikstra_time.txt
+python2 mean.py dyntsp_time.txt >> dyn_avg.txt
+rm dyntsp_time.txt
 
 for i in `seq 1 15`;
 do
-	python2 graphgen.py graph.txt 50
-	java Djikstra graph.txt 50
+	python2 graphgen.py g.txt 50
+	java DynTSP g.txt 50
 done
-python2 mean.py djikstra_time.txt >> dj_avg.txt
-rm djikstra_time.txt
+python2 mean.py dyntsp_time.txt >> dyn_avg.txt
+rm dyntsp_time.txt
