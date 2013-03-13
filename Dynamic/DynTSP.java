@@ -19,14 +19,15 @@ public class DynTSP{
 		this.graph = graph;
 		this.m = count;
 
-		long startTime = System.nanoTime();		
+		//long startTime = System.nanoTime();		
 		travel();
-		long timetaken = System.nanoTime() - startTime;
+		//long timetaken = System.nanoTime() - startTime;
 
-		writeData(timetaken, "dyntsp_time.txt");
+		//writeData(timetaken, "dyntsp_time.txt");
 	}
 
 	public void travel(){
+
 		Queue<CollectedEdge> coll = new LinkedList<CollectedEdge>();		
 
 		for(int i = 0; i < graph.size(); i++){
@@ -38,6 +39,7 @@ public class DynTSP{
 		}
 
 		int count = 2;
+		int c = 0;
 
 		while(count <= m){
 
@@ -49,36 +51,33 @@ public class DynTSP{
 				int vertex = f.getleft();
 
 				for(int k = 0; k < graph.size(); k++){
+
 					Edge e = graph.get(k);
 
 					if(count == m){
 						if(e.getleft() == 1 && vertex == e.getright()){
-							CollectedEdge temp = new CollectedEdge(f);
-							temp.addEdge(e);
-							coll.offer(temp);
+							f.addEdge(e);
+							coll.offer(f);
 						}
+
 					}
 
-					else if(e.getright() == vertex && !f.contains(e.getleft())){
+					if(e.getright() == vertex && !f.contains(e.getleft())){
+						c++;
+						System.out.println(c);
 						CollectedEdge temp = new CollectedEdge(f);
 						temp.addEdge(e);
-						coll.offer(temp);
+						coll.offer(temp);						
 					}
-
 				}
+
 			}
+			
 
 			count++;
 		}
 
-		CollectedEdge min = coll.peek();
-		for(CollectedEdge p: coll){
-			if(p.getWeight() < min.getWeight()){
-				min = p;
-			}
-		}
-
-		System.out.println(min);
+		//System.out.println(coll);
 	}
 
 
@@ -106,11 +105,9 @@ public class DynTSP{
 	public static void main(String[] args) {
 
 		String filename = args[0];
+		int vertexcount = Integer.parseInt(args[1]);
 
 		List<Edge> graph = new LinkedList<Edge>();
-
-		//count number of vertices
-		List<Integer> count = new LinkedList<Integer>();
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
 			String curr;
@@ -124,14 +121,6 @@ public class DynTSP{
 				int c = Integer.parseInt(line[2]);			
 
 				graph.add(new Edge(a, b, c));	
-
-				//count vertices
-				if(!count.contains(a)){
-					count.add(a);
-				}
-				if(!count.contains(b)){
-					count.add(b);
-				}	
 			}
 
 
@@ -139,7 +128,7 @@ public class DynTSP{
 			e.printStackTrace();
 		}
 
-		DynTSP d = new DynTSP(graph, count.size());
+		DynTSP d = new DynTSP(graph, vertexcount);
 
 	}
 

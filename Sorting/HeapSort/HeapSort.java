@@ -1,63 +1,111 @@
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 public class HeapSort{
 
-	private int[] sequence;
+	private Integer[] seq;
 	private int n;
+	private long comparisons;
 
-	public HeapSort(int[] _sequence){
-		this.sequence = _sequence;
-		this.n = sequence.length;
-		display();
-		heapify();
-		display();
-	}
+	public HeapSort(Integer[] seq, int n){
+		this.seq = seq;
+		this.n = n;
 
-	public void heapify(){
-		for(int i = 1; i < sequence.length + 1; i++){
-			dwsift(i);
-		}
-	}
+		long startTime = System.nanoTime();
+		heapify(seq.length - 1);
+		long timetaken = System.nanoTime() - startTime;
 
-	public void dwsift(int i){
-
-		int child1 = 2 * i;
-		int child2 = 2 * i + 1;
-
-		if(child1 <= n){
-			swap(i-1, child1-1);
-			sift(child1);
-		}
-
-	}
-
-	public void upsift(int i){
-
-		int child1 = 2 * i;
-		int child2 = 2 * i + 1;
-
-		if(child1 <= n){
-			swap(i-1, child1-1);
-			sift(child1);
-		}
-
-	}
-
-	public void swap(int x, int y){
-		sequence[x] = sequence[x]^sequence[y];
-		sequence[y] = sequence[x]^sequence[y];
-		sequence[x] = sequence[x]^sequence[y];
+		writeData(timetaken, "heap_time.txt");
+		writeData(comparisons, "heap_comp.txt");
 	}
 
 	public void display(){
-		for(int s: sequence){
-			System.out.print(s + ",");
+		for(int u: seq){
+			System.out.print(u + ", ");
 		}
 		System.out.println();
 	}
 
+	public void heapify(int tail){
+		for (int i = tail / 2; i >= 1; i--){
+			fixheap(i, tail, seq[i]);
+		}
+	  
+		for (int i = tail; i > 1; i--){
+			swap(1, i);
+			fixheap(1, i-1, seq[1]);
+		}
+	}
+	 
+	private void fixheap(int head, int tail, int key){
+
+		comparisons++;
+
+		int child = 2 * head;
+
+		if (child < tail && seq[child] < seq[child + 1]){
+			child++; 
+		}
+
+		if(child <= tail && key < seq[child]){
+			seq[head] = seq[child];
+			fixheap(child, tail, key);
+		} 
+		else{
+			seq[head] = key;
+		}
+	}
+
+	public void swap(int x, int y){
+		seq[x] = seq[x]^seq[y];
+		seq[y] = seq[x]^seq[y];
+		seq[x] = seq[x]^seq[y];
+	}
+
+    public void writeData(long datum, String filename){
+
+        try{
+            File file = new File(filename);
+
+            if(!file.exists()){
+                file.createNewFile();
+            }
+
+            FileWriter fw = new FileWriter(file.getName(), true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            String content = "" + datum + "\n";
+            bw.write(content);
+            bw.close();
+            
+        } catch (IOException e){
+                e.printStackTrace();
+        }
+
+    }
 
 	public static void main(String[] args) {
-		int[] g = {2, 8, 7, 6, 5, 3, 9, 1};
-		new HeapSort(g);
+
+		String filename = args[0];
+		List<Integer> nums = new ArrayList<Integer>();
+
+		try (BufferedReader br = new BufferedReader(new FileReader(filename))){
+			nums.add(0);
+			String curr;
+			while ((curr = br.readLine()) != null) {
+				nums.add(Integer.parseInt(curr));
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		Integer[] g = nums.toArray(new Integer[nums.size()]);
+		new HeapSort(g, g.length);
 	}
 
 }
