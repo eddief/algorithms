@@ -78,7 +78,7 @@ public class DynTSP{
 			}
 		}
 
-		//System.out.println(min);
+		System.out.println(min);
 	}
 
 

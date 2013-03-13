@@ -26,11 +26,15 @@ class CollectedEdge{
 
 		collection = new HashSet<Integer>();
 		collection.addAll(e.getList());
-
+		e.cclear();
 	}
 
 	public boolean contains(int o){
 		return collection.contains(o);
+	}
+
+	public void cclear(){
+		collection.clear();
 	}
 
 	public Set<Integer> getList(){
