@@ -19,10 +19,10 @@ public class MinMax{
 		sort();		
 		long timetaken = System.nanoTime() - startTime;
 
-		System.out.println("Number of Comparisons:" + comps);
+		//System.out.println("Number of Comparisons:" + comps);
 		//System.out.println("Time taken to sort: " + timetaken);
 
-		//writeData(comps, ".txt");
+		writeData(comps, "mimx_comp.txt");
 		writeData(timetaken, "mimx_time.txt");		
 	}
 
